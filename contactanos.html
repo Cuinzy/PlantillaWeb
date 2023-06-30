@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>THOTH</title>
+        <!-- BOOSTRAP CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+        <!-- Toastify CSS -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+        <link rel="stylesheet" href="style.css" />
+      
+</head>
+
+<body style="background-color:#ffffff;" >
+    
+  <!--navegacion-->
+  <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #05274C;">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand">
+        <img src="./img/Logotipo-blanco.png" alt="logo" width="100px" class="d-inline-block logo-img" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./nosotros.html">Nosotros </a>
+          </li>
+          <li class="nav-item loggedr-out" style="display: none;">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Registrarse</a>
+          </li>
+          <li class="nav-item loggedi-out" style="display: none;">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signinModal">Ingresar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contactanos.html">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./compra.html">Compras</a>
+          </li>
+          <li class="nav-item logged-in" style="display: none;">
+            <a class="nav-link" href="#" id="cerrar">Cerrar Sesion</a>
+          </li>
+        </ul>
+        <form class="d-flex ms-auto">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- Modal Registro-->
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Registrate</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="ingresar-form">
+
+            <div class="form-group">
+              <input type="text" id="ingresar-email" class="form-control" placeholder="correo" required>
+            </div>
+            <div class="form-group">
+              <input type="password" id="ingresar-password" class="form-control" placeholder="contraseña" required>
+            </div>
+            <button type="submit" class="btn btn-secondary btn-block">Registrar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Modal ingreso-->
+  <div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Ingresar</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="login-form">
+
+            <div class="form-group">
+              <input type="text" id="login-email" class="form-control" placeholder="correo" required>
+            </div>
+            <div class="form-group">
+              <input type="password" id="login-password" class="form-control" placeholder="contraseña" required>
+            </div>
+
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-secondary btn-block">
+                Ingresar
+              </button>
+              <button type="button" class="btn btn-dark btn-block" id="googlelogin">
+                Iniciar con Google
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--contenido-->
+
+  <div class="contariner">
+
+
+    <div class="row mb-5 justify-content-center ">
+
+      <div class="col-sm-8 pt-5 pb-5">
+
+        <h1 class="text-center mt-5">Contáctenos</h1>
+
+        <img src="./img/contacto.jpg" class=" mx-auto d-flex" alt="">
+
+
+
+        <h2 class="mt-5">Datos de contacto</h2>
+        <h5 style="color:#5a5a5a">Tenga presente los datos de contacto de nuestra empresa.</h5>
+        <ul>
+            <li><strong>Correo: </strong>Mitienda@gmail.com</li>
+            <li><strong>Telefono: </strong> +57 314 626 7863</li>
+            <li><strong>Ubicacion: </strong>Calle 3 #12-25 Popayan, Colombia</li>
+
+        </ul>
+        <h2 class="mt-5">Formulario</h2>
+        <h5 style="color:#5a5a5a">Para cualquier inquietud puede mandar su petición rellenado el siguiente formulario.</h5>
+        <form class="row g-3 needs-validation mt-3" novalidate>
+            <div class="col-md-4">
+              <label for="validationCustom01" class="form-label">Nombres</label>
+              <input type="text" class="form-control" id="validationCustom01" value="" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label">Apellidos</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustom03" class="form-label">Ciudad</label>
+              <input type="text" class="form-control" id="validationCustom03" required>
+              <div class="invalid-feedback">
+                Please provide a valid city.
+              </div>
+            </div>
+            
+          </form>
+
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Correo</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Correo@ejemplo.com">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Consulta</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+
+          <div class=" mb-3 col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+              <label class="form-check-label" for="invalidCheck">
+                Acepto terminos y condiciones
+              </label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Enviar</button>
+          </div>
+
+        <h2 class="mt-5">Ubicacion</h2>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15944.780632232232!2d-76.62970759999999!3d2.441956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30030ff9207c27%3A0xf76217f9f8464ebe!2sParque%20Caldas!5e0!3m2!1ses!2sco!4v1685216350626!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <!--Pie de pagina-->
+<section class = "footer"  style="background-color: #05274C;">
+    <div class="container mt-4 footer-dark">
+      <footer>
+        <div class="row p-5 text-white">
+          <div class="col-xs-12 col-md-6 col-lg-3">
+            <img src="./img/Logotipo-blanco.png" alt="illustration" />
+        </div>
+          <div class="col-xs-12 col-md-6 col-lg-3">
+            <h5>Contáctenos</h3>
+            <ul>
+              <li>+57 314 635 2929</li>
+              <li> info@algo.com</li>
+              <li> calle 3 #12-25 Popayan, Colombia</li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-md-6 col-lg-3">
+            <h5>Preguntas</h3>
+            <ul>
+              <li>Envia correo a:</li>
+              <li> info@algo.com</li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-md-6 col-lg-3">
+            <h5>Formas de pago</h3>
+            <ul>
+              <li>Visa</li>
+              <li>PayPal</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </section>
+  
+  
+  
+  <div class="container-fluid bg-light text-center p-3">
+    <p class="small"> &copy; 2023 THOTH :: Todos los derechos reservados. Politica de privacidad</p>
+    
+    </div>
+
+    <!--Scripst boostrap jss-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+    crossorigin="anonymous"></script>
+  <!--customcode-->
+  <script type="module" src="index.js"></script>
+
+</body>
+</html>
